@@ -1,59 +1,38 @@
-# Sprint5Angular
+# 🚀 Sprint 5 - Angular Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+This project is part of **Sprint 5 of the IT Academy bootcamp** and aims to **rebuild a landing page originally made with HTML and CSS**, now using the **Angular framework** from scratch.
 
-## Development server
+## 🎯 Project Objectives
 
-To start a local development server, run:
+- Learn the fundamentals of Angular through a real-world example.
+- Understand the internal structure of an Angular project.
+- Divide the layout into **reusable and modular components**.
+- Apply best practices with Git and branch management.
+- Integrate traditional HTML into Angular's component logic.
 
-```bash
-ng serve
-```
+## 🧠 Technologies Used
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [Angular](https://angular.io/) (v17+)
+- TypeScript
+- HTML5 + CSS3
+- Git & GitHub
 
-## Code scaffolding
+## 🌿 Branch Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This repository follows a clear and organized branching strategy:
 
-```bash
-ng generate component component-name
-```
+- `main` → Production-ready, clean and working code only
+- `develop` → Active development branch
+- `feature/*` → Feature branches for each component or section  
+  (e.g., `feature/navbar`, `feature/footer`, etc.)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Project Highlights
 
-```bash
-ng generate --help
-```
+- 🧱 Angular project scaffolded with `npx @angular/cli`
+- 📁 Modular structure with clean separation of components
+- 💡 Educational commits with step-by-step explanations
+- 🛠️ Git workflow following best practices
 
-## Building
+## 📝 Current Status
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> 🔧 Initial setup complete. The original HTML structure is being progressively migrated into Angular components.
