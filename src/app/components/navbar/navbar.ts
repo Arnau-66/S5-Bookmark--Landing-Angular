@@ -1,18 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
-  standalone: true,
+  styleUrls: ['./navbar.css'],
 })
 export class Navbar {
+
   isMenuOpen: boolean = false;
+
+  private elementRef = inject(ElementRef);
 
   toggleMenu(): void{
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const clickedInside = this.elementRef.nativeElement.contains(event.target);
+    if (!clickedInside) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.isMenuOpen = false;
+  }
 }
+
+
