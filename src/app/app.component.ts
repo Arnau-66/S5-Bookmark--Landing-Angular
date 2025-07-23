@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { Navbar } from './components/navbar/navbar';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,               // 👈 obligatorio en este tipo de estructura
+  standalone: true,
+  imports: [Navbar],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
