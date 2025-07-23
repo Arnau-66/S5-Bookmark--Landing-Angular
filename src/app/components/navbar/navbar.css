@@ -78,6 +78,10 @@
   padding: 10px 0;
 }
 
+.navbar-links-mobile a:hover {
+  color: #d9472b;
+}
+
 .navbar-links-mobile a.login-button {
   background: #f25f3a;
   color: white;
@@ -87,6 +91,11 @@
   text-align: center;
   width: 100px;
 }
+
+.navbar-links-mobile a.login-button:hover {
+  background-color: #d9472b;
+}
+
 
 @media (max-width: 1200px){
 
