@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })
+
 export class Navbar {
 
   isMenuOpen: boolean = false;
@@ -31,6 +32,13 @@ export class Navbar {
   onScroll() {
     this.isMenuOpen = false;
   }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapePress(event: Event) {
+    const keyboardEvent = event as KeyboardEvent;
+    this.isMenuOpen = false;
+  }
+
 }
 
 
