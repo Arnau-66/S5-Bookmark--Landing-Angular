@@ -111,7 +111,7 @@
      align-items: center;
   }
 
-      .navbar-links {
+  .navbar-links {
     display: none;
   }
 
@@ -135,7 +135,7 @@
 
   .logo {
     width: auto;
-    height: 30px;
+    height: 40px;
     justify-content: left;
   }
 
