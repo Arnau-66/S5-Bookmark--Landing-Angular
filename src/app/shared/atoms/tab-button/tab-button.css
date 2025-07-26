@@ -1,0 +1,33 @@
+
+
+
+button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #777;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 20px 0;
+  flex: 1;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+button:hover {
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 4px;
+  background-color: #f25f3a;
+  border-radius: 2px;
+}
