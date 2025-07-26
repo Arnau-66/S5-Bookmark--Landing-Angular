@@ -1,11 +1,12 @@
 import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Button } from '../../shared/atoms/button/button';
 
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Button],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })

@@ -13,13 +13,22 @@
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">Contact</a>
-          <a href="#" class="login-button">Login</a>
+          <app-button
+            [text]="'Login'"
+            [href]="'#'"
+            [variant]="'login-button'">
+          </app-button>
+
         </div>
         
         <div class="navbar-links-mobile" *ngIf="isMenuOpen">
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Contact</a>
-            <a href="#" class="login-button">Login</a>
+          <app-button
+            [text]="'Login'"
+            [href]="'#'"
+            [variant]="'login-button'">
+          </app-button>
         </div>
 </nav>

@@ -11,5 +11,5 @@ import { CommonModule } from '@angular/common';
 export class Button {
   @Input() text: string = 'Click me';
   @Input() href: string = '#';
-  @Input() variant: 'chrome' | 'firefox' = 'chrome';
+  @Input() variant: 'chrome' | 'firefox' | 'login-button' = 'chrome';
 }
