@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Button } from '../../shared/atoms/button/button';
+import { Button } from '../../atoms/button/button';
 
 
 @Component({

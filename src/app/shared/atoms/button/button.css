@@ -20,8 +20,14 @@
 }
 
 .login-button {
-  background: #f25f3a;
+  background: #f28c72;
   color: white;
   padding: 20px 60px;
   margin-left: 100px;
+}
+
+@media (max-width: 1200px) {
+  .login-button {
+    margin-left: 0;
+  }
 }
