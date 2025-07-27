@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Navbar } from './shared/organisms/navbar/navbar';
 import { Hero } from './shared/organisms/hero/hero';
+import { Features } from './shared/organisms/features/features';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, Hero],
+  imports: [Navbar, Hero, Features],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
