@@ -5,7 +5,7 @@ import { Button } from '../../atoms/button/button';
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [Component, TabButton, Button],
+  imports: [ TabButton, Button],
   templateUrl: './features.html',
   styleUrl: './features.css'
 })
