@@ -2,18 +2,18 @@
 
 <section class="features">
         <div class="features-header">
-            <app-feature-title
+            <app-features-title
             [title]="'Features'"
             [text]="'Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.'">
-            </app-feature-title>
+            </app-features-title>
         </div>
       
       <div class="features-content">
-        <div class="tabs">
-          <button class="tab active"><span>Simple Bookmarking</span></button>
-          <button class="tab"><span>Speedy Searching</span></button>
-          <button class="tab"><span>Easy Sharing</span></button>
-        </div>
+      <div class="tabs">
+        <app-tab-button label="Simple Bookmarking" [active]="true"></app-tab-button>
+        <app-tab-button label="Speedy Searching"></app-tab-button>
+        <app-tab-button label="Easy Sharing"></app-tab-button>
+      </div>
 
       <div class="features-hero">
           <div class="features-image">
