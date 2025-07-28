@@ -6,7 +6,6 @@
   font-weight: normal;
   cursor: pointer;
   padding: 20px 0;
-  flex: 1;
   position: relative;
   white-space: nowrap;
   transition: color 0.3s;
@@ -27,7 +26,7 @@
   transform: translateX(-50%);
   width: 130%;
   height: 4px;
-  background-color: #f25f3a;
+  background-color: #f28c72;
   border-radius: 2px;
 }
 
