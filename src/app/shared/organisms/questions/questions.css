@@ -52,3 +52,23 @@
 .question-btn:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 900px) {
+  .questions {
+    padding: 0 10%;
+  }
+
+  .questions-header .main-text-titles {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .questions-header .main-text {
+    font-size: 14px;
+    padding: 0 0px;
+  }
+
+    .questions-btn-container {
+    margin-top: 50px;
+  }
+}
