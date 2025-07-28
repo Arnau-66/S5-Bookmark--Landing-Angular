@@ -1,44 +1,38 @@
-
-
 <section class="features">
-        <div class="features-header">
-            <app-features-title
-            [title]="'Features'"
-            [text]="'Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.'">
-            </app-features-title>
-        </div>
-      
-      <div class="features-content">
-        <div class="tabs">
-          <app-tab-button
-            label="Simple Bookmarking"
-            [active]="activeTab === 'Simple Bookmarking'"
-            (click)="setActiveTab('Simple Bookmarking')"
-          ></app-tab-button>
+  <div class="features-header">
+    <app-features-title
+      [title]="'Features'"
+      [text]="'Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.'">
+    </app-features-title>
+  </div>
 
-          <app-tab-button
-            label="Speedy Searching"
-            [active]="activeTab === 'Speedy Searching'"
-            (click)="setActiveTab('Speedy Searching')"
-          ></app-tab-button>
+  <div class="features-content">
+    <div class="tabs">
+      <app-tab-button
+        label="Simple Bookmarking"
+        [active]="activeTab === 'Simple Bookmarking'"
+        (click)="setActiveTab('Simple Bookmarking')"
+      ></app-tab-button>
 
-          <app-tab-button
-            label="Easy Sharing"
-            [active]="activeTab === 'Easy Sharing'"
-            (click)="setActiveTab('Easy Sharing')"
-          ></app-tab-button>
-        </div>
+      <app-tab-button
+        label="Speedy Searching"
+        [active]="activeTab === 'Speedy Searching'"
+        (click)="setActiveTab('Speedy Searching')"
+      ></app-tab-button>
 
-      <div class="features-hero">
-          <div class="features-image">
-            <img src="assets/img/rectangulo-aliceblue.png" alt="Decoration" class="features-shape"/>
-            <img src="assets/img/illustration-features-tab-1.svg" alt="Illustration" class="features-illustration"/>
-      </div>
+      <app-tab-button
+        label="Easy Sharing"
+        [active]="activeTab === 'Easy Sharing'"
+        (click)="setActiveTab('Easy Sharing')"
+      ></app-tab-button>
+    </div>
 
-      <div class="features-text">
-            <p class="main-text-titles">Bookmark in one click</p>
-            <p class="main-text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-          </div>
-        </div>
-      </div>
+    <app-features-panel
+      [illustration]="'assets/img/illustration-features-tab-1.svg'"
+      [backgroundImage]="'assets/img/rectangulo-aliceblue.png'"
+      [title]="'Bookmark in one click'"
+      [description]="'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'"
+      [buttonLabel]="'More Info'">
+    </app-features-panel>
+  </div>
 </section>

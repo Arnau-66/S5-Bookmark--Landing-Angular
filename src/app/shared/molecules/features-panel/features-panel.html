@@ -1,1 +1,16 @@
-<p>features-panel works!</p>
+
+
+
+<div class="features-hero">
+  <div class="features-image">
+    <img [src]="backgroundImage" alt="Decoration" class="features-shape" />
+    <img [src]="illustration" alt="Illustration" class="features-illustration" />
+  </div>
+
+  <div class="features-text">
+    <p class="main-text-titles">{{ title }}</p>
+    <p class="main-text">{{ description }}</p>
+    <app-button [text]="buttonLabel"></app-button>
+  </div>
+</div>
+
