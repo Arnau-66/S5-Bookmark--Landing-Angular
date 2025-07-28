@@ -22,25 +22,7 @@ body {
 
 
 
-.extension {
-  max-width: 1200px;
-  margin: 200px auto;
-  padding: 60px;
-  text-align: center;
-  margin-bottom: 200px;
-}
 
-.extension-header {
-  max-width: 700px;
-  margin: 0 auto 60px;
-}
-
-.extension-cards {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
 .card {
   background: white;
