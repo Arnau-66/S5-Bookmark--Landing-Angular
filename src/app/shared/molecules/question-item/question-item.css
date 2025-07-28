@@ -1,0 +1,22 @@
+
+
+
+.question-item {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-item img {
+  width: 25px;
+}
+
+.question-item:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}

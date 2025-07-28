@@ -9,25 +9,15 @@
     </app-features-title>
 
   
-  <div class="questions-list">
-      <div class="question-item">
-        <span>What is Bookmark?</span>
-        <img src="assets/img/icon-arrow.svg" alt="arrow">
-      </div>
-      <div class="question-item">
-        <span>How can I request a new browser?</span>
-        <img src="assets/img/icon-arrow.svg" alt="arrow">
-      </div>
-      <div class="question-item">
-        <span>Is there a mobile app?</span>
-        <img src="assets/img/icon-arrow.svg" alt="arrow">
-      </div>
-      <div class="question-item">
-        <span>What about other Chromium browsers?</span>
-        <img src="assets/img/icon-arrow.svg" alt="arrow">
-      </div>
+    <div class="questions-list">
+        <app-question-item question="What is Bookmark?"></app-question-item>
+        <app-question-item question="How can I request a new browser?"></app-question-item>
+        <app-question-item question="Is there a mobile app?"></app-question-item>
+        <app-question-item question="What about other Chromium browsers?"></app-question-item>
     </div>
+    
     <div class="questions-btn-container">
-      <a href="#!" class="question-btn">More Info</a>
-  </div>
+    <app-button text="More Info" variant="chrome"></app-button>
+    </div>
+
 </section>
