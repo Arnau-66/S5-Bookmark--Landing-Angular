@@ -28,11 +28,12 @@
     </div>
 
     <app-features-panel
-      [illustration]="'assets/img/illustration-features-tab-1.svg'"
+      [illustration]="tabsContent[activeTab].illustration"
+      [title]="tabsContent[activeTab].title"
+      [description]="tabsContent[activeTab].description"
       [backgroundImage]="'assets/img/rectangulo-aliceblue.png'"
-      [title]="'Bookmark in one click'"
-      [description]="'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'"
-      [buttonLabel]="'More Info'">
-    </app-features-panel>
+      [buttonLabel]="'More Info'"
+    ></app-features-panel>
+
   </div>
 </section>
