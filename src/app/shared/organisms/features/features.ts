@@ -10,6 +10,11 @@ import { FeaturesTitle } from '../../molecules/features-title/features-title';
   templateUrl: './features.html',
   styleUrl: './features.css'
 })
-export class Features {
 
+export class Features {
+  activeTab: string = 'Simple Bookmarking';
+
+  setActiveTab(tabLabel: string): void {
+    this.activeTab = tabLabel;
+  }
 }

@@ -9,11 +9,25 @@
         </div>
       
       <div class="features-content">
-      <div class="tabs">
-        <app-tab-button label="Simple Bookmarking"></app-tab-button>
-        <app-tab-button label="Speedy Searching"></app-tab-button>
-        <app-tab-button label="Easy Sharing"></app-tab-button>
-      </div>
+        <div class="tabs">
+          <app-tab-button
+            label="Simple Bookmarking"
+            [active]="activeTab === 'Simple Bookmarking'"
+            (click)="setActiveTab('Simple Bookmarking')"
+          ></app-tab-button>
+
+          <app-tab-button
+            label="Speedy Searching"
+            [active]="activeTab === 'Speedy Searching'"
+            (click)="setActiveTab('Speedy Searching')"
+          ></app-tab-button>
+
+          <app-tab-button
+            label="Easy Sharing"
+            [active]="activeTab === 'Easy Sharing'"
+            (click)="setActiveTab('Easy Sharing')"
+          ></app-tab-button>
+        </div>
 
       <div class="features-hero">
           <div class="features-image">

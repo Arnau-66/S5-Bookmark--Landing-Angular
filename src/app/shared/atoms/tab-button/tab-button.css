@@ -1,4 +1,4 @@
-button {
+.tab {
   background: none;
   border: none;
   font-size: 28px;
@@ -12,12 +12,14 @@ button {
   transition: color 0.3s;
 }
 
-button:hover {
+.tab:hover,
+.tab.active {
   color: #2c2c2c;
   font-weight: bold;
 }
 
-button.active::after {
+.tab:hover::after,
+.tab.active::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -30,7 +32,7 @@ button.active::after {
 }
 
 @media (max-width: 1200px) {
-  button {
+  .tab {
     flex: none;
     font-size: 22px;
     padding: 10px 0;
@@ -40,7 +42,7 @@ button.active::after {
 }
 
 @media (max-width: 900px) {
-  button {
+  .tab {
     flex: none;
     font-size: 22px;
     padding: 10px 0;
