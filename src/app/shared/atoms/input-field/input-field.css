@@ -9,3 +9,10 @@
   width: 300px;
   max-width: 90%;
 }
+
+.input-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: left;
+}
