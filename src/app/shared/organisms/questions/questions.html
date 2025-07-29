@@ -10,10 +10,25 @@
 
   
     <div class="questions-list">
-        <app-question-item question="What is Bookmark?"></app-question-item>
-        <app-question-item question="How can I request a new browser?"></app-question-item>
-        <app-question-item question="Is there a mobile app?"></app-question-item>
-        <app-question-item question="What about other Chromium browsers?"></app-question-item>
+        <app-question-item
+        [question]="'What is Bookmark?'"
+        [answer]="'Bookmark is a tool that allows you to save and organize your favorite websites so you can access them quickly and easily later on.'">
+        </app-question-item>
+
+        <app-question-item
+        [question]="'How can I request a new browser?'"
+        [answer]="'You can request a new browser by contacting our support team. We're constantly expanding and appreciate feedback from our users.'">
+        </app-question-item>
+
+        <app-question-item
+        [question]="'Is there a mobile app?'"
+        [answer]="'Currently, we are working on mobile applications. In the meantime, you can use the web version from your mobile browser without issues.'">
+        </app-question-item>
+
+        <app-question-item
+        [question]="'What about other Chromium browsers?'"
+        [answer]="'We support the most popular Chromium-based browsers, and we’re always adding more. Let us know which one you'd like us to support next.'">
+        </app-question-item>
     </div>
     
     <div class="questions-btn-container">

@@ -21,6 +21,16 @@
   transition: opacity 0.3s;
 }
 
+img.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+img {
+  width: 25px;
+  transition: transform 0.3s;
+}
+
 @media (max-width: 900px) {
       .question-item {
     font-size: 15px;

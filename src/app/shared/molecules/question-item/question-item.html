@@ -1,8 +1,15 @@
 
 
 
-<div class="question-item">
-  <span>{{ question }}</span>
-  <img src="assets/img/icon-arrow.svg" alt="arrow" />
+<div class="question-item" (click)="toggleOpen()">
+  <div class="question-header">
+    <span>{{ question }}</span>
+    <img src="assets/img/icon-arrow.svg" [class.rotated]="isOpen" alt="arrow icon" />
+  </div>
+
+  <div class="question-answer" *ngIf="isOpen">
+    <p>{{ answer }}</p>
+  </div>
 </div>
+
 
