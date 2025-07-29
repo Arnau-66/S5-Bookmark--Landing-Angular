@@ -1,0 +1,35 @@
+
+
+
+.newsletter-subtitle {
+  letter-spacing: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.newsletter-title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .newsletter-subtitle {
+    letter-spacing: 4px;
+    font-size: 14px;
+  }
+
+  .newsletter-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+}
