@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-question-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './question-item.html',
   styleUrl: './question-item.css'
 })
@@ -13,7 +14,7 @@ export class QuestionItem {
 
   isOpen: boolean = false;
 
-    toggleOpen() {
+    toggleOpen(): void{
     this.isOpen = !this.isOpen;
   }
 }
