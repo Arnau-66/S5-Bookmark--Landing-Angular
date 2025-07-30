@@ -1,37 +1,80 @@
-# 🛠️ Development Branch - Sprint 5 Angular Landing Page
+# 🚧 Develop Branch – Sprint 5 Angular Project
 
-This is the **development branch** of the Sprint 5 Angular project. All feature branches are merged here once they are tested and validated.
-
-## ⚙️ Purpose
-
-This branch acts as the main integration point for all ongoing work. It may contain unfinished components or experimental implementations before being finalized and pushed to `main`.
-
-## 🌱 Workflow
-
-The Git workflow for this project follows a structured branching strategy:
-
-- `main` → Final, production-ready code
-- `develop` → Active development branch
-- `feature/*` → Feature branches for individual components or tasks
-
-### Example branches:
-
-- `feature/navbar`
-- `feature/hero-section`
-- `feature/footer`
-- `feature/contact-form`
+This document describes the active development state of the **Sprint 5** project from the IT Academy bootcamp. It is based on a previously designed responsive landing page using HTML and CSS (Sprint 1), now migrated to Angular using the **Atomic Design** approach.
 
 ---
 
-## 🧱 What is being worked on?
+## 🧱 Project Architecture
 
-> The original HTML/CSS landing page is being progressively reconstructed in Angular. Each section is built as an independent Angular component and styled accordingly.
+The project is divided into reusable components following the **Atomic Design** pattern:
+
+```
+src/
+└── app/
+    ├── shared/
+    │   ├── atoms/
+    │   ├── molecules/
+    │   ├── organisms/
+    └── app.component.ts
+```
+
+CSS styles are also organized per component.
 
 ---
 
-## 🧪 Testing and Validation
+## ⚙️ Technologies Used
 
-Once a `feature/*` branch is completed:
-1. It is merged into `develop`
-2. The whole page is tested for functionality and layout
-3. When all features are complete and tested, `develop` is merged into `main`
+- Angular 17+ with Standalone Components
+- HTML5 and CSS3 (modularized)
+- FormsModule for `ngModel` validation
+- **Atomic Design** pattern
+- Git and GitHub for version control
+
+---
+
+## 🔧 Features in Development
+
+- ✅ Responsive navbar with working hamburger menu
+- ✅ Hero section with introductory message
+- ✅ Features section with dynamic tabs
+- ✅ Extension section with reusable cards
+- ✅ FAQ section with collapsible items (accordion)
+- ✅ Newsletter form with `blur` email validation
+- ✅ Footer with links and social media
+- ⚠️ Pending: Testing
+
+---
+
+## 📂 Active Branches
+
+- `main`: stable and final compiled version
+- `develop`: current development branch
+- `feature/...`: feature-specific branches per component or section
+
+---
+
+## 🧪 Current Status
+
+The Angular application is fully functional, with all sections migrated from static HTML/CSS. All components are organized and decoupled, ready for unit testing or future service integration.
+
+---
+
+## 🧠 Best Practices Applied
+
+- All components use `standalone: true`
+- Specific imports per component (`@Component.imports`)
+- CSS modularized per component
+- Atom reuse (`app-button`, `app-input-field`)
+- Typed and clean code organization
+
+---
+
+## 🔗 Project Link (optional)
+
+> _Include a GitHub Pages, Vercel or Netlify link if deployed._
+
+---
+
+## 📅 Last Updated
+
+**July 2025**
