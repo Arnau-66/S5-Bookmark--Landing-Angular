@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InputField } from './input-field';
+
 
 describe('InputField', () => {
   let component: InputField;
@@ -20,4 +20,30 @@ describe('InputField', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the placeholder', () => {
+    component.placeholder = 'Enter your email';
+    fixture.detectChanges();
+
+    const input: HTMLInputElement = fixture.nativeElement.querySelector('input');
+    expect(input.getAttribute('placeholder')).toBe('Enter your email');
+  });
+
+  it('should clear error on valid email after blur', async () => {
+    const input: HTMLInputElement = fixture.nativeElement.querySelector('input');
+
+    input.value = 'valid@mail.com';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    input.dispatchEvent(new Event('blur'));
+    fixture.detectChanges();
+
+    const errorEl: HTMLElement | null = fixture.nativeElement.querySelector('.input-error');
+    expect(component.error).toBe('');
+    expect(errorEl).toBeNull();
+  });
+
+
 });
