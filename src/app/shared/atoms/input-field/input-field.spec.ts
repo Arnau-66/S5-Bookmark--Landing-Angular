@@ -45,5 +45,20 @@ describe('InputField', () => {
     expect(errorEl).toBeNull();
   });
 
+  it('should show error on invalid email after blur', async () => {
+    const input: HTMLInputElement = fixture.nativeElement.querySelector('input');
+
+    input.value = 'not-an-email';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    input.dispatchEvent(new Event('blur'));
+    fixture.detectChanges();
+
+    const errorEl: HTMLElement | null = fixture.nativeElement.querySelector('.input-error');
+    expect(component.error).toBe('Please enter a valid email address.');
+    expect(errorEl?.textContent?.trim()).toBe('Please enter a valid email address.');
+  });
 
 });
