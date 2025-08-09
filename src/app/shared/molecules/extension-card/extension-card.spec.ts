@@ -56,7 +56,7 @@ describe('ExtensionCard', () => {
     const buttonInstance = buttonDe.componentInstance as Button;
 
     expect(buttonInstance.href).toBe('https://example.com/install');
-    expect(buttonInstance.text).toBe('Add & Install Extension'); // definido en el template del padre
+    expect(buttonInstance.text).toBe('Add & Install Extension');
   });
 
 });
