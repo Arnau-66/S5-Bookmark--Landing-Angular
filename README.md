@@ -1,80 +1,90 @@
-# 🚧 Develop Branch – Sprint 5 Angular Project
+# 🚀 Develop Branch – Sprint 5 Angular Project
 
-This document describes the active development state of the **Sprint 5** project from the IT Academy bootcamp. It is based on a previously designed responsive landing page using HTML and CSS (Sprint 1), now migrated to Angular using the **Atomic Design** approach.
+This document describes the **current development** state of the Sprint 5 project from the IT Academy bootcamp. It is based on the **responsive landing page** designed in Sprint 1 with HTML and CSS, now fully migrated to Angular using the **Atomic Design** approach.
 
 ---
 
-## 🧱 Project Architecture
+## 🧱 Project Architecture – Atomic Design
 
-The project is divided into reusable components following the **Atomic Design** pattern:
+The project structure follows the **Atomic Design** principles, ensuring scalability and reusability:
 
-```
 src/
 └── app/
-    ├── shared/
-    │   ├── atoms/
-    │   ├── molecules/
-    │   ├── organisms/
-    └── app.component.ts
-```
+├── shared/
+│ ├── atoms/ # Smallest UI elements (buttons, input fields, etc.)
+│ ├── molecules/ # Combinations of atoms (newsletter form, question item, etc.)
+│ ├── organisms/ # Complex sections (navbar, hero, features, etc.)
+└── app.component.ts # Root component
 
-CSS styles are also organized per component.
+Each component has its own HTML, CSS, and logic (TypeScript), and styles are **modularized** to avoid global conflicts.
 
 ---
 
 ## ⚙️ Technologies Used
 
-- Angular 17+ with Standalone Components
-- HTML5 and CSS3 (modularized)
-- FormsModule for `ngModel` validation
-- **Atomic Design** pattern
+- Angular 20.1.1 with Standalone Components
+- HTML5 and CSS3 (modularized per component)
+- FormsModule for `ngModel` and blur validation
+- **Atomic Design** methodology
 - Git and GitHub for version control
 
 ---
 
-## 🔧 Features in Development
+## 🔧 New Features Added in Angular Migration
 
-- ✅ Responsive navbar with working hamburger menu
-- ✅ Hero section with introductory message
-- ✅ Features section with dynamic tabs
-- ✅ Extension section with reusable cards
-- ✅ FAQ section with collapsible items (accordion)
-- ✅ Newsletter form with `blur` email validation
-- ✅ Footer with links and social media
-- ⚠️ Pending: Testing
+Compared to Sprint 1, the Angular version includes several enhancements:
 
----
-
-## 📂 Active Branches
-
-- `main`: stable and final compiled version
-- `develop`: current development branch
-- `feature/...`: feature-specific branches per component or section
+- **Navbar**: Responsive with working hamburger menu toggle.
+- **Features Section**: Now dynamic, with tabbed content switching.
+- **Questions Section**: Accordion functionality to expand/collapse answers.
+- **Newsletter Section**: Email validation triggered on `blur` event.
+- **UI Improvements**: Updated color palette and minor design adjustments (e.g., refined toggle menu animation).
+- **Component Reuse**: Atoms like `app-button` and `app-input-field` used across multiple sections.
 
 ---
 
-## 🧪 Current Status
+## 🧪 Testing
 
-The Angular application is fully functional, with all sections migrated from static HTML/CSS. All components are organized and decoupled, ready for unit testing or future service integration.
+Unit tests have been implemented for atoms, molecules, and organisms to ensure:
+
+- Components render with correct content and structure.
+- Event handlers (e.g., menu toggle, blur validation) work as expected.
+- Component integration within organisms (e.g., Navbar includes `app-button`) functions correctly.
+
+Testing is done with **Jasmine + Karma**, focusing on behavior and component interaction.
+
+---
+
+## 📂 Workflow and Branching Strategy
+
+The project uses a **Git feature-branch workflow**:
+
+- `main`: Stable and production-ready version.
+- `develop`: Integration branch for completed features.
+- `feature/...`: Individual branches for specific components or functionalities.
+
+Example feature branches in this sprint:
+- `features/navbar`
+- `features/hero`
+- `features/features`
+- `features/extension`
+- `features/questions`
+- `features/newsletter`
+- `features/footer`
+- `features/testing`
 
 ---
 
 ## 🧠 Best Practices Applied
 
-- All components use `standalone: true`
-- Specific imports per component (`@Component.imports`)
-- CSS modularized per component
-- Atom reuse (`app-button`, `app-input-field`)
-- Typed and clean code organization
-
----
-
-## 🔗 Project Link (optional)
-
-> _Include a GitHub Pages, Vercel or Netlify link if deployed._
+- Standalone components with scoped imports.
+- Clear separation of concerns (atoms, molecules, organisms).
+- Consistent naming and folder structure.
+- Modular CSS per component.
+- Type-safe code using Angular and TypeScript features.
 
 ---
 
 ## 📅 Last Updated
 
-**July 2025**
+**August 2025**
