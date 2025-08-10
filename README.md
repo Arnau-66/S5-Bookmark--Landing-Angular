@@ -1,199 +1,141 @@
-<<<<<<< HEAD
-# 🚀 Develop Branch – Sprint 5 Angular Project
+# ✅ Main Branch – Sprint 5 Angular Project
 
-This document describes the **current development** state of the Sprint 5 project from the IT Academy bootcamp. It is based on the **responsive landing page** designed in Sprint 1 with HTML and CSS, now fully migrated to Angular using the **Atomic Design** approach.
+This document describes the **final production version** of the Sprint 5 project from the IT Academy bootcamp.  
+It is based on the **responsive landing page** originally developed in Sprint 1 with HTML and CSS, now fully migrated and improved in **Angular** using the **Atomic Design** methodology.  
 
 ---
 
 ## 🧱 Project Architecture – Atomic Design
 
-The project structure follows the **Atomic Design** principles, ensuring scalability and reusability:
+The project is structured to ensure **scalability, maintainability, and reusability** using the **Atomic Design** pattern:
 
+```
 src/
 └── app/
-├── shared/
-│ ├── atoms/ # Smallest UI elements (buttons, input fields, etc.)
-│ ├── molecules/ # Combinations of atoms (newsletter form, question item, etc.)
-│ ├── organisms/ # Complex sections (navbar, hero, features, etc.)
-└── app.component.ts # Root component
+    ├── shared/
+    │   ├── atoms/       # Smallest UI elements (e.g., buttons, input fields)
+    │   ├── molecules/   # Combinations of atoms (e.g., newsletter form, question item)
+    │   ├── organisms/   # Complex sections composed of molecules and atoms (e.g., navbar, hero, features)
+    └── app.component.ts # Root component integrating all organisms
+```
 
-Each component has its own HTML, CSS, and logic (TypeScript), and styles are **modularized** to avoid global conflicts.
+**Key points:**
+- Each component has its **own HTML, CSS, and TypeScript** file.
+- Styles are **scoped and modularized** to prevent global conflicts.
+- Standalone components are used to avoid unnecessary Angular modules.
 
 ---
 
 ## ⚙️ Technologies Used
 
-- Angular 20.1.1 with Standalone Components
-- HTML5 and CSS3 (modularized per component)
-- FormsModule for `ngModel` and blur validation
-- **Atomic Design** methodology
-- Git and GitHub for version control
+- **Angular 20.1.1** with Standalone Components  
+- HTML5 & CSS3 (modularized per component)  
+- `FormsModule` for `ngModel` and `blur` event validation  
+- **Atomic Design** methodology for UI architecture  
+- Git & GitHub for version control and collaborative workflow  
 
 ---
 
-## 🔧 New Features Added in Angular Migration
+## 🚀 Improvements Over Sprint 1
 
-Compared to Sprint 1, the Angular version includes several enhancements:
+The migration to Angular has brought **significant enhancements** compared to the original HTML/CSS implementation:
 
-- **Navbar**: Responsive with working hamburger menu toggle.
-- **Features Section**: Now dynamic, with tabbed content switching.
-- **Questions Section**: Accordion functionality to expand/collapse answers.
-- **Newsletter Section**: Email validation triggered on `blur` event.
-- **UI Improvements**: Updated color palette and minor design adjustments (e.g., refined toggle menu animation).
-- **Component Reuse**: Atoms like `app-button` and `app-input-field` used across multiple sections.
+### 1️⃣ Navbar
+- Fully responsive with **hamburger menu toggle**.
+- Menu closes automatically on:
+  - Outside click
+  - Scroll event
+  - Escape key press
+- Refined toggle animation and alignment.
+
+### 2️⃣ Features Section
+- Now **dynamic**: content switches between tabs without reloading the page.
+- Centralized tab logic inside the component for maintainability.
+
+### 3️⃣ Questions Section
+- Implemented as an **accordion**.
+- Users can expand/collapse answers interactively.
+
+### 4️⃣ Newsletter Section
+- Added **email validation on `blur` event**, providing instant feedback.
+- Built using reusable atoms (e.g., `app-input-field`) and molecules.
+
+### 5️⃣ UI & Design
+- **Updated color palette** for better contrast and modern look.
+- Minor layout adjustments (spacing, padding, alignment).
+- Buttons, icons, and menu elements refined for better usability.
+
+### 6️⃣ Component Reuse
+- Atoms like `app-button` and `app-input-field` are reused across multiple sections, ensuring visual and behavioral consistency.
 
 ---
 
-## 🧪 Testing
+## 🧪 Testing Overview
 
-Unit tests have been implemented for atoms, molecules, and organisms to ensure:
+The project includes **unit tests** for atoms, molecules, and organisms, ensuring that both **individual components** and their **integration** work correctly.
 
-- Components render with correct content and structure.
-- Event handlers (e.g., menu toggle, blur validation) work as expected.
-- Component integration within organisms (e.g., Navbar includes `app-button`) functions correctly.
+### ✅ What We Test
+- **Rendering:** Components display correct labels, text, and attributes.
+- **Events & Interaction:**  
+  - Navbar hamburger menu toggles state correctly.  
+  - `blur` validation in Newsletter triggers and works as expected.  
+  - Accordion in Questions expands/collapses properly.
+- **Component Composition:**  
+  - Organisms include the right child components (e.g., Navbar contains `app-button`).
 
-Testing is done with **Jasmine + Karma**, focusing on behavior and component interaction.
+### 🛠 Tools & Frameworks
+- **Jasmine + Karma** for running unit tests.
+- `TestBed` for creating isolated testing environments.
+- `By` from `@angular/platform-browser` to query DOM elements.
+- `DebugElement` for inspecting and interacting with components.
+
+### 📌 How to Run the Tests
+```bash
+ng test
+```
+This will:
+- Compile the project in testing mode.
+- Open the Karma test runner in the browser.
+- Show a live report of all passing/failing tests.
 
 ---
 
-## 📂 Workflow and Branching Strategy
+## 📂 Workflow & Branching Strategy
 
-The project uses a **Git feature-branch workflow**:
+The team follows a **feature-branch workflow**:
 
-- `main`: Stable and production-ready version.
-- `develop`: Integration branch for completed features.
-- `feature/...`: Individual branches for specific components or functionalities.
+- `main` → Stable, production-ready version.  
+- `develop` → Integration branch for all completed features before release.  
+- `feature/...` → One branch per component/feature, e.g.:
+  - `features/navbar`
+  - `features/hero`
+  - `features/features`
+  - `features/extension`
+  - `features/questions`
+  - `features/newsletter`
+  - `features/footer`
+  - `features/testing`
 
-Example feature branches in this sprint:
-- `features/navbar`
-- `features/hero`
-- `features/features`
-- `features/extension`
-- `features/questions`
-- `features/newsletter`
-- `features/footer`
-- `features/testing`
+**Workflow Example:**
+1. Create `feature/component-name` from `develop`.  
+2. Implement the feature and commit changes.  
+3. Open a Pull Request (PR) to `develop`.  
+4. Test and review the merged code in `develop`.  
+5. Merge `develop` into `main` for the final release.
 
 ---
 
 ## 🧠 Best Practices Applied
-
 - Standalone components with scoped imports.
-- Clear separation of concerns (atoms, molecules, organisms).
+- Clear separation of concerns:
+  - **Atoms** = smallest elements
+  - **Molecules** = combinations of atoms
+  - **Organisms** = complete sections
 - Consistent naming and folder structure.
-- Modular CSS per component.
-- Type-safe code using Angular and TypeScript features.
+- Type-safe code with Angular & TypeScript.
+- Reusable components to avoid code duplication.
 
 ---
 
 ## 📅 Last Updated
-
 **August 2025**
-=======
-# 🚀 Angular Landing Page - Sprint 5
-
-This project is a complete **landing page** built using **Angular** and structured with the principles of **Atomic Design**. It replicates a professional layout composed of different sections (hero, features, FAQ, newsletter, etc.), implemented as modular and reusable Angular components.
-
----
-
-## 🧱 Project Structure
-
-The app follows the [Atomic Design methodology](https://bradfrost.com/blog/post/atomic-web-design/) with the following hierarchy:
-
-```
-src/
-└── app/
-    └── shared/
-        ├── atoms/         # Smallest UI elements (button, input)
-        ├── molecules/     # Groups of atoms (form, title+text blocks)
-        ├── organisms/     # Full sections (navbar, hero, features, etc.)
-```
-
----
-
-## 🧩 Components Overview
-
-### Atoms
-- `Button`: reusable CTA button with styling variants.
-- `InputField`: custom input with built-in blur validation and error messages.
-- `TabButton`: custom tab switcher button with active logic.
-
-### Molecules
-- `FeaturesTitle`: a block with a title and subtitle.
-- `NewsletterForm`: includes `InputField` and `Button`, with email validation.
-
-### Organisms
-- `Navbar`: responsive top navigation bar.
-- `Hero`: headline and main CTA.
-- `Features`: tab-based feature content with dynamic panels.
-- `Extension`: download cards for Chrome, Firefox, and Opera.
-- `Questions`: FAQ with collapsible answers and icon animation.
-- `Newsletter`: subscription form with validation.
-- `Footer`: brand, links, and social media icons.
-
----
-
-## 🎨 Styling
-
-- All components are styled using standard CSS.
-- Media queries ensure **responsive design** for screen sizes ≤ 900px.
-- Styles are divided by component (`.css` files next to `.ts`/`.html`).
-
----
-
-## 📦 Technologies Used
-
-- **Angular Standalone Components** (Angular 17+)
-- **FormsModule** (for input validation)
-- **TypeScript** (strictly typed)
-- **HTML/CSS** (fully responsive)
-
----
-
-## 🛠️ How to Run
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/angular-landing-page.git
-   cd angular-landing-page
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   ng serve
-   ```
-
-4. Open your browser at:
-   ```
-   http://localhost:4200
-   ```
-
----
-
-## ✅ Features
-
-- 🌐 Fully modular Angular app
-- 🔁 Reusable components with inputs and logic
-- 🧪 Input validation on blur
-- 📱 Fully responsive
-- ♻️ Atomic Design structure
-- 🔥 Hover effects and button variants
-
----
-
-## 📌 Notes
-
-- This project is part of **Sprint 5** of the **IT Academy Bootcamp**.
-- Developed with a focus on **clean architecture**, **reusability**, and **UI best practices**.
-
----
-
-## 🧠 Author
-
-**Arnau Pérez**  
->>>>>>> 5654750a88daa511720a68a5a24d7752c2894b09
